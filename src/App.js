@@ -9,7 +9,21 @@ import { useEffect } from "react";
 const reducer = (state, action) => {
   switch (action.type) {
     case "FETCH":
-      return { ...state, data: action.data, loading: false, doneFetching: true };
+      return {
+        ...state,
+        data: action.data,
+        loading: false,
+        doneFetching: true,
+      };
+      break;
+    case "REFRESH":
+      return {
+        ...state,
+        loading: true,
+        doneFetching: false,
+      };
+
+      break;
     default:
       return state;
   }
@@ -32,10 +46,19 @@ function App() {
     console.log(state.data);
   };
 
+  let refreshData = async (url) => {
+    dispatch({ type: "REFRESH" });
+    let res = await fetch(url);
+    let data1 = await res.json();
+    console.log(data1);
+    console.log(state.data);
+    dispatch({ type: "FETCH", data: data1 });
+  };
+
   useEffect(() => {
-    setTimeout(() => {
-      getData("https://api.adviceslip.com/advice");
-    }, 2000);
+    // setTimeout(() => {
+    getData("https://api.adviceslip.com/advice");
+    // }, 2000);
   }, []);
 
   // console.log(state.doneFetching);
@@ -45,7 +68,7 @@ function App() {
 
   https: return (
     <div className="App">
-      <Home state={state} />
+      <Home state={state} refreshData={refreshData} />
     </div>
   );
 }

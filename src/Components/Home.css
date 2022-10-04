@@ -1,0 +1,56 @@
+/** @format */
+
+.patternD {
+  display: none;
+}
+.mobile{
+    width: 100%;
+}
+
+.container {
+  background-color: hsl(217, 19%, 24%);
+  padding: 20px 10px;
+  padding-bottom: 60px;
+  border-radius: 10px;
+  max-width: 85%;
+  margin: 300px auto;
+  position: relative;
+}
+
+.container p:nth-of-type(1) {
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+.container p:nth-of-type(2) {
+  color: white;
+  font-size: 28px;
+}
+
+.container div {
+  background-color: hsl(150, 100%, 66%);
+  position: absolute;
+  left: 41%;
+  bottom: -10%;
+  padding: 20px;
+  padding-bottom: 16px;
+  border-radius: 40px;
+}
+
+
+.btn {
+  /* left: 30%; */
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+
+    .container div{
+        left: 44%;
+    }
+
+    .container{
+        max-width: 480px;
+    }
+    
+}
