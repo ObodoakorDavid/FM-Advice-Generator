@@ -1,19 +1,23 @@
 /** @format */
 
+.advice {
+  font-family: Manrope;
+}
+
 .patternD {
   display: none;
 }
-.mobile{
-    width: 100%;
+.mobile {
+  width: 100%;
 }
 
 .container {
   background-color: hsl(217, 19%, 24%);
-  padding: 20px 10px;
+  padding: 20px 20px;
   padding-bottom: 60px;
   border-radius: 10px;
-  max-width: 85%;
-  margin: 300px auto;
+  max-width: 375px;
+  margin: 300px 60px;
   position: relative;
 }
 
@@ -31,26 +35,31 @@
   background-color: hsl(150, 100%, 66%);
   position: absolute;
   left: 41%;
-  bottom: -10%;
+  bottom: -13%;
   padding: 20px;
   padding-bottom: 16px;
   border-radius: 40px;
 }
 
-
 .btn {
-  /* left: 30%; */
   width: 100%;
 }
 
 @media (min-width: 480px) {
+  .container div {
+    left: 44%;
+  }
 
-    .container div{
-        left: 44%;
-    }
+  .container {
+    max-width: 420px;
+    margin: 300px auto;
+  }
 
-    .container{
-        max-width: 480px;
-    }
-    
+  .mobile {
+    display: none;
+  }
+  .patternD {
+    display: block;
+    width: 100%;
+  }
 }

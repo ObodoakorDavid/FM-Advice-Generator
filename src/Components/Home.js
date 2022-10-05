@@ -13,7 +13,7 @@ const Home = ({ state, refreshData }) => {
       {state.doneFetching && (
         <div className="container" key={state.data.slip.id}>
           <p> ADVICE #{state.data.slip.id}</p>
-          <p>"{state.data.slip.advice}"</p>
+          <p className="advice">"{state.data.slip.advice}"</p>
           <img className="patterM mobile" src={patternM} alt="" />
           <img className="patternD desktop" src={patternD} alt="" />
           <div>
