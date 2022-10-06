@@ -1,7 +1,8 @@
 /** @format */
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
 
 .advice {
-  font-family: Manrope;
+  font-family: "Manrope", sans-serif;
 }
 
 .patternD {
