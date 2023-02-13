@@ -18,7 +18,7 @@
   padding-bottom: 60px;
   border-radius: 10px;
   max-width: 375px;
-  margin: 300px 60px;
+  margin: 100px 60px;
   position: relative;
 }
 
@@ -53,7 +53,7 @@
 
   .container {
     max-width: 420px;
-    margin: 300px auto;
+    margin: 100px auto;
   }
 
   .mobile {
