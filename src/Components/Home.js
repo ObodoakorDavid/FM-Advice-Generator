@@ -5,11 +5,12 @@ import "./Home.css";
 import patternM from "../images/pattern-divider-mobile.svg";
 import patternD from "../images/pattern-divider-desktop.svg";
 import button from "../images/icon-dice.svg";
+import Loading from "../utils/Loading";
 
 const Home = ({ state, refreshData }) => {
   return (
     <div>
-      {state.loading && <div>Loading</div>}
+      {state.loading && <Loading loading={state.loading} />}
       {state.doneFetching && (
         <div className="container" key={state.data.slip.id}>
           <p> ADVICE #{state.data.slip.id}</p>
@@ -25,6 +26,7 @@ const Home = ({ state, refreshData }) => {
               className="btn"
               src={button}
               alt=""
+              style={{ cursor: "pointer" }}
             />
           </div>{" "}
         </div>

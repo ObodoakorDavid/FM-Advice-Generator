@@ -1,6 +1,5 @@
 /** @format */
 
-import logo from "./logo.svg";
 import "./App.css";
 import Home from "./Components/Home";
 import { useReducer } from "react";
@@ -47,7 +46,9 @@ function App() {
   };
 
   useEffect(() => {
-    getData("https://api.adviceslip.com/advice");
+    setTimeout(() => {
+      getData("https://api.adviceslip.com/advice");
+    }, 1000);
   }, []);
 
   return (
